@@ -1,0 +1,4 @@
+Jobs: [29, 41, 49, 41, 34]
+Machines: 5
+Best Makespan: 49
+Best Assignment: (0, 1, 2, 3, 4)
