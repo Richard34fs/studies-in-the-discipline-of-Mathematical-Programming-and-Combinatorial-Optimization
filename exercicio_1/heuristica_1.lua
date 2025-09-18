@@ -1,3 +1,4 @@
+local start = os.clock()
 local function indice_menor(t)
     local menor_indice = 1
     for i = 2, #t do
@@ -9,7 +10,10 @@ local function indice_menor(t)
 end
 
 -- Ler arquivo
-local arquivo = io.open("problema_escalonamento_instancias/instance_m03_n05_01.txt", "r")
+local arquivo = io.open(
+  "problema_escalonamento_instancias/instance_m07_n06_01.txt",
+  "r"
+)
 
 local num_maquinas = tonumber(arquivo:read("*l"))
 
@@ -51,3 +55,5 @@ for i = 2, num_maquinas do
   end
 end
 print(max)
+local finish = os.clock()
+print(finish - start)
