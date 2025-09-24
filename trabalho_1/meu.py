@@ -12,9 +12,6 @@ with open('instancias_caixeiro_viajante/1_inst1.tsp', 'r') as arquivo:
         splited.pop(0)
         ver.append(splited)
 
-
-marcado = [0] * len(ver)
-
 def guloso(ver, marcado, atual):
 
     if marcado[atual] == 1:
@@ -42,4 +39,14 @@ def guloso(ver, marcado, atual):
 
     return inf + guloso(ver, marcado, proximo)
 
-print(guloso(ver, marcado,0))
+melhor = float("inf")
+
+for i in range(len(ver)):
+    
+    marcado = [0] * len(ver)
+    custo = guloso(ver, marcado,i)
+    print (custo)
+    if custo < melhor:
+        melhor = custo
+    
+print("melhor: " , melhor)
