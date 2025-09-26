@@ -8,7 +8,7 @@ with open('instancias_caixeiro_viajante/1_inst1.tsp', 'r') as arquivo:
         line = arquivo.readline()
         if not line:
             break
-        splited = list(map(int, line.split()))
+        splited = list(map(float, line.split()))
         splited.pop(0)
         ver.append(splited)
 
@@ -45,7 +45,7 @@ for i in range(len(ver)):
     
     marcado = [0] * len(ver)
     custo = guloso(ver, marcado,i)
-    print (custo)
+    print(custo)
     if custo < melhor:
         melhor = custo
     

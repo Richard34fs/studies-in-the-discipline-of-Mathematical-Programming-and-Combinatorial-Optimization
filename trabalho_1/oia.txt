@@ -1,0 +1,38 @@
+força bruta:
+instancia = resultado milisegundo
+1 = 197 51 
+2 = 217 22 
+3 = 283 22 segundos
+4 = 
+5 = 
+6 = 
+7 = 
+8 = 
+9 = 
+10 =
+
+guloso:
+instancia = resultado milisegundo
+1 = 197 52 
+2 = 217 37 
+3 = 283 38 
+4 = 312 52 
+5 = 511 42
+6 = 8980 110
+7 = 830 48
+8 = 642 53
+9 = 1554 45
+10 = 27807 48
+
+meu:
+instancia = resultado milisegundo
+1 = 157 40 
+2 = 172 38
+3 = 226 35
+4 = 294 35
+5 = 475 57
+6 = 7975 60
+7 = 765 92
+8 = 617 88
+9 = 1358 202
+10 = 25195 207

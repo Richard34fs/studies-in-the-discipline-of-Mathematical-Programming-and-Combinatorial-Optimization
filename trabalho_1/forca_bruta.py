@@ -1,12 +1,14 @@
 from itertools import permutations
 import math
+import time
+
 ver = []
 inf = float('inf')
+tempo_limite = 4 * 60  # 4 minutos em segundos
+inicio = time.time()
 
-with open('instancias_caixeiro_viajante/1_inst1.tsp', 'r') as arquivo:
-
+with open('instancias_caixeiro_viajante/4_inst4.tsp', 'r') as arquivo:
     while True:
-
         line = arquivo.readline()
         if not line:
             break
@@ -14,9 +16,11 @@ with open('instancias_caixeiro_viajante/1_inst1.tsp', 'r') as arquivo:
         splited.pop(0)
         ver.append(splited)
 
-
 for perm in permutations(ver):
-    
+    # Checa se passou do tempo limite
+    if time.time() - inicio > tempo_limite:
+        break
+
     dist = 0
     for i in range(len(perm) - 1):
         dist_x = perm[i][0] - perm[i+1][0]
@@ -30,4 +34,4 @@ for perm in permutations(ver):
     if dist < inf:
         inf = dist
 
-print (inf)
+print(inf)

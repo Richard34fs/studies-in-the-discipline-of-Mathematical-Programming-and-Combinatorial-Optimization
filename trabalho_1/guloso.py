@@ -1,14 +1,14 @@
 import math
 ver = []
 
-with open('instancias_caixeiro_viajante/1_inst1.tsp', 'r') as arquivo:
+with open('instancias_caixeiro_viajante/10_kroA100.tsp', 'r') as arquivo:
 
     while True:
 
         line = arquivo.readline()
         if not line:
             break
-        splited = list(map(int, line.split()))
+        splited = list(map(float, line.split()))
         splited.pop(0)
         ver.append(splited)
 
